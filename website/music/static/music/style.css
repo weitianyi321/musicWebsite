@@ -1,0 +1,34 @@
+body {
+    background: grey url("images/images.jpg") no-repeat center center fixed;;
+}
+
+ul.errorlist {
+    padding-left: 0;
+}
+
+ul.errorlist > li {
+    list-style: none;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.navbar-brand {
+    font-family: serif;
+}
+
+.glyphicon-star {
+    color: #CCCCCC;
+    font-size: 16px;
+}
+
+.glyphicon-star.active {
+    color: #FDB230;
+}
+
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: cornflowerblue;
+}
+

@@ -1,0 +1,29 @@
+nav {
+	text-align:center
+}
+nav a {
+	display: inline-block;
+	padding: .3rem 1rem;
+	color: #000;
+	text-decoration: none;
+	font-family: Avenir, Arial, sans-serif;
+	text-align:center
+}
+nav a:hover, nav a:focus {
+	color: #fff;
+	background: #000;
+}
+nav a:not(:last-child) {
+	border-right: 1px solid black;
+}
+/*twitter-widget {
+	text-align:center
+}*/
+
+/*.container {
+  display: flex;
+  /*justify-content: center;
+}*/
+/*.center {
+  width: 500px;
+}*/

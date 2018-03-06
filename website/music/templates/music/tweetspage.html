@@ -1,0 +1,48 @@
+{% extends 'music/base.html' %}
+{% block body %}
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" ng-app="tweetApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'music/tweetspage.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>Welcome to Tweets Classification</title>
+</head>
+
+<body ng-controller="TweetsController1 as controller">
+<nav>
+<a ng-click="showTweetsByCategory('business')">Business</a>
+<a ng-click="showTweetsByCategory('entertainment')">Entertainment</a>
+<a ng-click="showTweetsByCategory('us')">Local</a>
+<a ng-click="showTweetsByCategory('health')">Health</a>
+<a ng-click="showTweetsByCategory('sci_tech')">Science, Technology</a>
+<a ng-click="showTweetsByCategory('world')">World</a>
+<a ng-click="showTweetsByCategory('sport')">Sports</a>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4" ng-repeat="tweet in labeledTweets">
+      <twitter-widget twitter-widget-id="tweet">
+      </twitter-widget>
+    </div>
+  </div>
+</div>
+
+</body>
+ <div class = "result2">
+ </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.min.js"></script>
+    <script src="{% static 'music/ngtweet.min.js' %}"></script>
+    <script src="{% static 'music/app.js' %}"></script>
+    <script src="{% static 'music/controller1.js' %}"></script>
+    <script>          
+    </script>    
+</html>
+{% endblock %}
